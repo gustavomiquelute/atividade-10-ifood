@@ -1,3 +1,7 @@
+<?php
+include 'infra/conexao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +19,7 @@
     <div>
         <h2>Cadastro</h2>
 
-        <form action="cadastro">
+        <form action="public/salvar.php" method="POST">
 
         <label>Cadastrar como:</label>
 
@@ -32,34 +36,39 @@
         </label>
 
         <div id="formulario_cliente" class="form">
-            <h3>Cadastrar cliente:</h3>
+            <h3>Informações cliente:</h3>
             <label>Nome:</label>
-            <input type="text" name="nome" required>
+            <input type="text" name="nome_cliente">
             <br>
             <label>Email:</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email_cliente">
             <br>
             <label>Telefone:</label>
-            <input type="tel" name="telefone" required>
+            <input type="tel" name="telefone_cliente">
             <br>
             <label>Endereço:</label>
-            <input type="text" name="endereco" required>
+            <input type="text" name="endereco_cliente">
+            <br>
+            <button type="submit">Cadastrar</button>
         </div>
 
         <div id="formulario_restaurante" class="form">
-            <h3>Cadastrar restaurante:</h3>
+            <h3>Informações restaurante:</h3>
             <label>Nome:</label>
-            <input type="text" name="nome" required>
+            <input type="text" name="nome_restaurante">
             <br>
             <label>Categoria:</label>
-            <input type="text" name="categoria" required>
+            <input type="text" name="categoria">
             <br>
             <label>Endereço:</label>
-            <input type="text" name="endereco" required>
+            <input type="text" name="endereco_restaurante">
             <br>
             <label>Telefone:</label>
-            <input type="tel" name="telefone" required>
+            <input type="tel" name="telefone_restaurante">
+            <br>
+            <button type="submit">Cadastrar</button>
         </div>
+        
 
         </form>
     </div>
